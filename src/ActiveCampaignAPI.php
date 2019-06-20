@@ -5,11 +5,13 @@ namespace Drupal\activecampaign;
 use ActiveCampaign;
 use Drupal\activecampaign\Entity\ActiveCampaignList;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * ActiveCampaign Api wrapper.
  */
 class ActiveCampaignAPI {
+  use StringTranslationTrait;
 
   protected $ac;
   protected $apiKey;
@@ -30,7 +32,7 @@ class ActiveCampaignAPI {
   protected function connect() {
     $ac = new ActiveCampaign($this->apiUrl, $this->apiKey);
     if (!(int) $ac->credentials_test()) {
-      drupal_set_message(t("Access denied: Invalid credentials (URL and/or API key).</p>"));
+      drupal_set_message($this->t("Access denied: Invalid credentials (URL and/or API key).</p>"));
     }
     $ac->set_curl_timeout(10);
     $this->ac = $ac;
