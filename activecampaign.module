@@ -4,21 +4,3 @@
  * @file
  * Contains activecampaign.module.
  */
-
-use Drupal\Core\Routing\RouteMatchInterface;
-
-/**
- * Implements hook_help().
- */
-function activecampaign_help($route_name, RouteMatchInterface $route_match) {
-  switch ($route_name) {
-    // Main module help for the activecampaign module.
-    case 'help.page.activecampaign':
-      $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('ActiveCampgain integration') . '</p>';
-      return $output;
-
-    default:
-  }
-}
