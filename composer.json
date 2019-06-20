@@ -11,6 +11,6 @@
     "source": "http://cgit.drupalcode.org/activecampaign"
   },
   "require": {
-    "activecampaign/api-php": "dev-develop"
+    "activecampaign/api-php": "dev-master"
   }
 }
