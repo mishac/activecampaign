@@ -1,7 +1,7 @@
 {
   "name": "drupal/activecampaign",
   "type": "drupal-module",
-  "description": "ActiveCampgain integration",
+  "description": "ActiveCampaign integration",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
   "homepage": "https://www.drupal.org/project/activecampaign",
