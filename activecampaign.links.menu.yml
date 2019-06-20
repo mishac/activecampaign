@@ -1,0 +1,17 @@
+
+# ActiveCampaignList menu items definition
+activecampaign.settings_form:
+  title: 'Active Campaign Settings'
+  route_name: activecampaign.settings_form
+  description: 'Active Campaign Settings'
+  parent: system.admin_config_system
+  weight: 99
+
+
+# ActiveCampaignList menu items definition
+entity.active_campaign_list.collection:
+  title: 'ActiveCampaign Lists'
+  route_name: entity.active_campaign_list.collection
+  description: 'List ActiveCampaignList (bundles)'
+  parent: activecampaign.settings_form
+  weight: 99

@@ -1,0 +1,12 @@
+activecampaign.active_campaign_list.*:
+  type: config_entity
+  label: 'ActiveCampaignList config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
