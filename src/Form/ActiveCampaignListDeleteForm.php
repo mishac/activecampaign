@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
- * Builds the form to deleteActiveCampaign List entities.
+ * Builds the form to delete ActiveCampaign List entities.
  */
 class ActiveCampaignListDeleteForm extends EntityConfirmFormBase {
 

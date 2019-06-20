@@ -5,7 +5,7 @@ namespace Drupal\activecampaign\Entity;
 use Drupal\Core\Config\Entity\ConfigEntityInterface;
 
 /**
- * Provides an interface for definingActiveCampaign List entities.
+ * Provides an interface for defining ActiveCampaign List entities.
  */
 interface ActiveCampaignListInterface extends ConfigEntityInterface {
 

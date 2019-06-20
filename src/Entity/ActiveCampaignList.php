@@ -5,7 +5,7 @@ namespace Drupal\activecampaign\Entity;
 use Drupal\Core\Config\Entity\ConfigEntityBase;
 
 /**
- * Defines theActiveCampaign List entity.
+ * Defines the ActiveCampaign List entity.
  *
  * @ConfigEntityType(
  *   id = "active_campaign_list",
@@ -33,14 +33,14 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
 class ActiveCampaignList extends ConfigEntityBase implements ActiveCampaignListInterface {
 
   /**
-   * TheActiveCampaign List ID.
+   * The ActiveCampaign List ID.
    *
    * @var string
    */
   protected $id;
 
   /**
-   * TheActiveCampaign List label.
+   * The ActiveCampaign List label.
    *
    * @var string
    */

@@ -22,7 +22,7 @@ class ActiveCampaignListForm extends EntityForm {
       '#title' => $this->t('Label'),
       '#maxlength' => 255,
       '#default_value' => $active_campaign_list->label(),
-      '#description' => $this->t("Label for theActiveCampaign List."),
+      '#description' => $this->t("Label for the ActiveCampaign List."),
       '#required' => TRUE,
     ];
 
@@ -49,13 +49,13 @@ class ActiveCampaignListForm extends EntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %labelActiveCampaign List.', [
+        drupal_set_message($this->t('Created the %label ActiveCampaign List.', [
           '%label' => $active_campaign_list->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %labelActiveCampaign List.', [
+        drupal_set_message($this->t('Saved the %label ActiveCampaign List.', [
           '%label' => $active_campaign_list->label(),
         ]));
     }
