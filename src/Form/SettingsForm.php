@@ -4,6 +4,7 @@ namespace Drupal\activecampaign\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\activecampaign\ActiveCampaignAPI;
 
 /**
  * Class SettingsForm.
@@ -31,6 +32,12 @@ class SettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('activecampaign.settings');
+    $form['api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('API Url'),
+      '#description' => $this->t('API Url'),
+      '#default_value' => $config->get('api_url'),
+    ];
     $form['api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('API Key'),
@@ -39,7 +46,9 @@ class SettingsForm extends ConfigFormBase {
       '#size' => 72,
       '#default_value' => $config->get('api_key'),
     ];
+
     return parent::buildForm($form, $form_state);
+
   }
 
   /**
@@ -50,7 +59,11 @@ class SettingsForm extends ConfigFormBase {
 
     $this->config('activecampaign.settings')
       ->set('api_key', $form_state->getValue('api_key'))
+      ->set('api_url', $form_state->getValue('api_url'))
       ->save();
+
+    $api = new ActiveCampaignAPI($form_state->getValue('api_url'), $form_state->getValue('api_key'));
+    $api->syncLists();
   }
 
 }
