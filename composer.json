@@ -1,0 +1,16 @@
+{
+  "name": "drupal/activecampaign",
+  "type": "drupal-module",
+  "description": "ActiveCampgain integration",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/activecampaign",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/activecampaign",
+    "source": "http://cgit.drupalcode.org/activecampaign"
+  },
+  "require": {
+    "activecampaign/api-php": "dev-master"
+  }
+}

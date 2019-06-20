@@ -1,0 +1,5 @@
+name: 'ActiveCampaign'
+type: module
+description: 'ActiveCampgain integration'
+core: 8.x
+package: 'ActiveCampaign'
